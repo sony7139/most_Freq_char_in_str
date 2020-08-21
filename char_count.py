@@ -3,8 +3,10 @@ def most_freq(str):
     d = {}
     for char in b:
         d[char] = str.count(char)
-    sorted(d.values(),reverse=True)
-    print(d)
+    for i in sorted(d,key=d.get,reverse=True):
+        print(i,end="")
+        print("=",end="")
+        print(d[i])
     
 str = input("Please enter a string")
 most_freq(str)
